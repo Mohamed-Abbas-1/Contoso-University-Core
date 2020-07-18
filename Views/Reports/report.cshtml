@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewData["Title"] = "report";
+}
+
+<h1>Reports</h1>
+<div class="container" >
+    <div class="row" style="height:60vh">
+    <div style="margin:auto;height:150px" >
+@Html.ActionLink("Print Report", "PrintReport")
+&nbsp;&nbsp;&nbsp;
+@Html.ActionLink("Export Report", "ExportReport")
+<br />
+<br />
+@{Html.BeginForm("CreateDocument", "Reports", FormMethod.Get);
+    {
+        <div>
+            <input class="btn btn-warning text-white"  type="submit" value="CREATE DOCUMENT" style="margin:auto;font-weight:800" />
+        </div>
+    }
+    Html.EndForm();
+}
+</div>
+</div>
+</div>
